@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login-page</title>
+	<script type="text/javascript">
+		
+		function checkpassword()
+		{
+		  var pw1=document.getElementById('password').value;
+		  var pw2=document.getElementById('confirm-password').value;
+
+		  if(pw1===pw2)
+		  {
+		  	window.location='./fb.html';
+		  	
+  			return true;
+		  }
+
+		  else
+		  {
+		  	alert("Passwords don't match");
+		  	return false;
+		  
+		  }
+		}
+	</script>
+	<style type="text/css">
+		body
+		{
+			background-image: url('./2nd.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+        .login-box
+        {
+        	margin-top: 50px;
+        	margin-left: 370px;
+        	background-color: black;
+            opacity: 0.8;
+            height: 600px;
+            width: 600px;
+            color: white;
+            text-align: center;
+            padding-top: 30px;
+        }
+        button
+        {
+        	width: 200px;
+    height: 50px;
+    border-radius:25px;
+    text-align: center;
+    margin-top: 90px;
+    margin-left:  10px;
+    text-decoration: none;
+    background-color: #3090C7;
+    color: white;
+     
+    font-size: 30px;
+        }
+	</style>
+</head>
+<body>
+	
+<div class="login-box">
+	<form method="POST" action="javascript:checkpassword()">
+	<h2>REGISTER</h2>
+	<h3>Name</h3>
+	<input type="text" name="name">
+	<h3>Email</h3>
+	<input type="email" name="email">
+	<h3>Password</h3>
+	<input type="password" name="password" id="password">
+	<h3>Confirm Password</h3>
+	<input type="password" name="confirm-password" id="confirm-password">
+	
+	<div><button type="submit" value="submit">  REGISTER</button></div>
+</form>
+</div>
+</body>
+</html>

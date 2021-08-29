@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fb-login</title>
+	<style type="text/css">
+	body
+		{
+			background-image: url('./2nd.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+        .login-box
+        {
+        	margin-top: 50px;
+        	margin-left: 370px;
+        	background-color: black;
+            opacity: 0.8;
+            height: 600px;
+            width: 600px;
+            color: white;
+            text-align: center;
+            padding-top: 30px;
+        }
+        .box
+        {
+
+        	width: 350px;
+    height: 100px;
+    border-radius:25px;
+    text-align: center;
+    margin-top: 250px;
+    margin-left:  500px;
+    text-decoration: none;
+    background-color: #3090C7;
+    color: white;
+     
+    font-size: 30px;
+        
+        }
+    </style>
+    <script>
+    	function buttonClick() {
+    		// alert('button clicked');
+    		FB.getLoginStatus(function(response) {
+    			
+    		console.log(response);
+			    // statusChangeCallback(response);
+			});
+    	}
+    	function statusChangeCallback(data) {
+    		console.log(data);
+    	}
+    </script>
+</head>
+<body>
+	<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '520983825670845',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v11.0'
+    });
+  };
+</script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+       <button onclick="buttonClick()" class="box">LOGIN WITH FACEBOOK</button>
+</body>
+</html>
